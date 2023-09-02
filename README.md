@@ -1,7 +1,7 @@
 # Repository for Research about lung nodules detection using AI.
 ----------------------------------------------------------------
 
-## Create TRPMLN Dataset for training to detect cancer/normal nodules.
+## Create a TRPMLN dataset to train AI models that may be able to detect normal cancer/nodules.
 
 We should have a new empty directory to store `tiff` images by using something like `mkdir ROI/` in UNIX, and we should have the `LIDC-LDRI` Dataset.
 ### Installation and initialisation.
@@ -19,6 +19,8 @@ The `execution` should give one `csv` file and a directory of `ttif` images.
 The `csv` File contains the nodule name, and if it's cancer or not, based on the score of three experts that diagnosed each nodule as malignant or benign.
 
 ### USAGE the TRPMLN as a Dataset to Train a model.
+
+The main goal of our dataset `TRPMLN` is to simply get these values `X_train`, `X_test`, `y_train`, and `y_test` by applying some preprocessing steps to the `LIDC-IDRI` dataset to make it suitable for our CNN model.
 
 ```py
 df = pd.read_csv("output.csv")
