@@ -92,7 +92,7 @@ class ScanData:
                 # Save the image as a TIFF file in the patient directory
                 filename = row["roi_name"]
                 cv2.imwrite(f"{dir}/{filename}", roi)
-            if i % 10: # clean some ram usage, use more cpu and the time.
+            if i % 10: # clean some ram usage, use more cpu and time.
                 gc.collect()
         return self
 
